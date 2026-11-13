@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanvi · BCA student & web developer</title>
+<meta name="description" content="Portfolio of Sanvi, a BCA student in Kolkata building web apps with Python, Java, C and JavaScript.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF4F1; --surface:#FFFFFF; --ink:#16343C; --muted:#4F6A70;
+  --accent:#F2563F; --sun:#FFD166; --line:#C9DAD5;
+  --head:"Bricolage Grotesque",Georgia,serif; --body:"Figtree",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F2329; --surface:#173139; --ink:#EAF4F1; --muted:#9DB8B8; --accent:#FF7A66; --sun:#FFD166; --line:#2A4750;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;gap:1.5rem;justify-content:flex-end;padding:1.25rem 0;font-weight:600}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center;padding:3rem 0 5rem}
+h1{font:800 clamp(3.4rem,10vw,7rem)/.92 var(--head);letter-spacing:-.04em;margin:0 0 1.25rem}
+.lead{font-size:1.25rem;max-width:30rem;margin:0 0 1.75rem;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.code{background:#10282E;color:#DDEFEA;border-radius:14px;padding:1.25rem 1.4rem;font:500 .95rem/1.7 ui-monospace,Menlo,Consolas,monospace;box-shadow:8px 8px 0 var(--sun);overflow-x:auto}
+.code .k{color:#FF8F7E}.code .s{color:#FFD166}.code .c{color:#7FA3A6}
+.cursor{display:inline-block;width:.6ch;height:1.1em;background:#FFD166;vertical-align:text-bottom;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* sections */
+section{padding:3.5rem 0;border-top:2px solid var(--line)}
+h2{font:800 2.2rem/1.1 var(--head);letter-spacing:-.02em;margin:0 0 1.75rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.about p{margin:0 0 1rem;max-width:34rem}
+dl{margin:0}
+dt{font-weight:600;margin-top:1rem}
+dd{margin:0;color:var(--muted)}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.5rem}
+.skills h3,.proj h3{font:800 1.25rem/1.2 var(--head);margin:0 0 .6rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:0;list-style:none}
+.tags li{background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:.2rem .85rem;font-weight:600;font-size:.95rem}
+
+.proj{background:var(--surface);border:2px solid var(--ink);border-radius:18px;padding:2rem;max-width:44rem}
+.proj p{margin:0 0 1rem}
+.proj .tags{margin-bottom:1.25rem}
+.proj .links{display:flex;gap:.75rem;flex-wrap:wrap}
+.note{color:var(--muted);margin-top:1.5rem}
+
+.contact p{max-width:34rem;margin:0 0 1.5rem}
+footer{padding:2.5rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:2px solid var(--line)}
+
+@media (max-width:780px){
+  .hero,.about{grid-template-columns:1fr}
+  .hero{padding-top:1.5rem}
+}
+@media (prefers-reduced-motion:reduce){.cursor{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>Sanvi</h1>
+      <p class="lead">BCA student in Kolkata. I build web apps, write C and Java for class, and organise tech events for my college.</p>
+      <div class="btns">
+        <a class="btn main" href="#projects">See my project</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <pre class="code" aria-label="A C program that prints a greeting"><span class="k">#include</span> <span class="s">&lt;stdio.h&gt;</span>
+
+<span class="k">int</span> main(<span class="k">void</span>) {
+  printf(<span class="s">"Hi, I'm Sanvi.\n"</span>);
+  <span class="c">// BCA, class of 2029</span>
+  <span class="k">return</span> 0;
+}<span class="cursor" aria-hidden="true"></span></pre>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about">
+      <div>
+        <p>I'm in my second year of a BCA at Saroj Mohan Institute of Technology. This year I'm studying C programming, Computer Architecture and Environmental Studies.</p>
+        <p>Outside lectures I build web projects and lead the PR and Social Work team at Techno Endeavors, our college tech society.</p>
+      </div>
+      <dl>
+        <dt>Education</dt>
+        <dd>BCA, Saroj Mohan Institute of Technology (expected 2029)</dd>
+        <dd>Loreto Day School, Dharamshala</dd>
+        <dt>Leadership</dt>
+        <dd>Head member, PR team and Social Work department, Techno Endeavors. We run hackathons, tech quizzes and cultural programs.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Languages</h3><ul class="tags"><li>C</li><li>Java</li><li>Python</li><li>JavaScript</li></ul></div>
+      <div><h3>Web</h3><ul class="tags"><li>HTML</li><li>CSS</li><li>FastAPI</li></ul></div>
+      <div><h3>Coursework</h3><ul class="tags"><li>Computer Architecture</li><li>Environmental Studies</li></ul></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <article class="proj">
+      <h3>RetroMind</h3>
+      <p>An academic and wellness platform with separate student and faculty portals. It scores student risk, offers an AI counselor chat, builds intervention plans and tracks progress over time.</p>
+      <p>I also trained a model on a 3,000-row career dataset. Given a student's stream, interests, skills and scores, it recommends a career through a <code>/career-advice</code> endpoint.</p>
+      <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>FastAPI</li><li>Python</li></ul>
+      <div class="links">
+        <!-- TODO: replace YOUR-USERNAME with your GitHub username -->
+        <a class="btn" href="https://github.com/YOUR-USERNAME/retromind">View code on GitHub</a>
+      </div>
+    </article>
+    <p class="note">More projects will be added here as I finish them.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>I'm open to internships, collaborations and event partnerships. Email me and I'll reply soon.</p>
+    <div class="btns">
+      <a class="btn main" href="mailto:sanvishaw8076@gmail.com">Email me</a>
+      <!-- TODO: replace with your real links -->
+      <a class="btn" href="https://github.com/YOUR-USERNAME">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Sanvi. Built with plain HTML and CSS.</footer>
+</div>
+</body>
+</html>
